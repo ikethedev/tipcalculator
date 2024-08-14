@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="splitter" />
+    </header>
+    <main>
+      <form>
+        <div class="container">
+          <label for="bill">Bill</label>
+          <div class="input_container">
+            <img class="icon" src="./images/icon-dollar.svg" alt="dollar" />
+            <input type="text" id="bill_amount" placeholder="Enter bill amount" />
+          </div>
+        </div>
+        <div class="container">
+          <label for="tip-percent"> Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="btn" value="5">5%</button>
+            <button class="btn selected" value="10">10%</button>
+            <button class="btn" value="15">15%</button>
+            <button class="btn" value="25">25%</button>
+            <button class="btn" value="50">50%</button>
+            <input class="btn input_btn" type="text" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="number_container">
+            <label for="total-people">Number of People</label>
+            <p class="message error_message hidden">Can't be zero</p>
+          </div>
+          <div class="input_container">
+            <img class="icon" src="./images/icon-person.svg" alt="person" />
+            <input class="party" type="text" placeholder="0" />
+          </div>
+        </div>
+      </form>
+      <section class="container calculated_amount">
+        <article>
+          <div class="total_container">
+            <p>
+              Tip Amount / <br />
+              <span> person </span>
+            </p>
+            <p id="personTip" class="total_amounts">$4.27</p>
+          </div>
+       
+          <div class="total_container">
+            <p>
+              Total / <br />
+              <span> person </span>
+            </p>
+            <p id="personBill" class="total_amounts">$32.79</p>
+          </div>
+        </article>
+        <button id="reset" class="reset_btn">Reset</button>
+      </section>
+    </main>
+
+    
+  </body>
+</html>
